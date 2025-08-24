@@ -1,0 +1,174 @@
+<section class="home-video-hero">
+  <video src="{{ section.settings.video.sources[1].url }}" muted loop autoplay playsinline></video>
+  <div class="content-wrapper">
+    <div data-aos="fade-up" data-aos-duration="1500" class="content">
+      <h1>{{ section.settings.heading }}</h1>
+      <a href="{{ section.settings.button_url }}" class="btn">{{ section.settings.button_label }}</a>
+    </div>
+    <div class="product-image">
+      <img src="{{ section.settings.product_image | img_url: '1000x' }}" alt="{{ section.settings.product_url.alt }}">
+    </div>
+    
+  </div>
+
+</section>
+
+{% schema %}
+  {
+    "name": "Home Video Hero",
+    "settings": [
+      {
+        "id": "video",
+        "type": "video",
+        "label": "Video"
+      },
+      {
+        "id": "product_image",
+        "type": "image_picker",
+        "label": "Product Image"
+      },
+      {
+        "id": "heading",
+        "type": "text",
+        "label": "Heading"
+      },
+      {
+        "id": "button_url",
+        "type": "url",
+        "label": "Button URL"
+      },
+      {
+        "id": "button_label",
+        "type": "text",
+        "label": "Button Label"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Home Video Hero",
+        "category": "saltbone"
+
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+  section.home-video-hero {
+    position: relative;
+    height: 800px;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: 1;
+    }
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 0;
+    }
+
+    .content-wrapper {
+      max-width: 1600px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      position: relative;
+      padding: 0 35px;
+
+      .product-image {
+        animation: heroBottle 1.5s forwards;      
+        position: absolute;
+        top: -150px;
+        right: 100px;
+        position: absolute;
+        z-index: 1;
+
+        img {         
+          width: 400px;                  
+        }
+      }
+
+      .content {
+        background-color: rgba(255,255,255,0.55);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 800px;
+        padding: 65px;
+        z-index: 2;
+        h1 {
+          color: var(--color-darkblue);
+        }
+      }
+    }
+
+    @media (max-width: 1200px) {
+      height: 600px;
+      .content-wrapper {
+        padding: 0 25px;
+        .product-image {
+          right: 0;
+          img {
+            width: 300px;
+          }
+        }
+
+        .content {
+          padding: 45px;
+          max-width: 700px;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      height: 550px;
+      .content-wrapper {
+        .content {
+          padding: 45px 25px;
+          align-items: center;
+          background-color: rgba(255,255,255,0.75);
+
+          h1 {
+            text-align: center;
+          }
+        }
+
+        .product-image {
+          right: -70px;
+
+          img {
+            width: 250px;
+          }
+        }
+      }
+    }
+
+
+  }
+{% endstylesheet %}
+
+{% javascript %}
+  document.addEventListener('scroll', function() {
+    var img = document.querySelector('.home-video-hero .product-image img');
+    if (!img) return;
+    var scrolled = window.scrollY;
+    var translateY = Math.max(-scrolled * 0.3, -300);
+    img.style.transform = `translateY(${translateY}px)`;
+  });
+{% endjavascript %}

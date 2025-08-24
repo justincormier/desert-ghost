@@ -1,0 +1,148 @@
+<section class="image-slider">
+  <div data-aos="fade-up" data-aos-duration="1000" class="content-wrapper">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <div class="swiper-slide">
+            <div class="slide-wrapper">
+              <picture>
+                <source srcset="{{ block.settings.image_mobile | img_url: '768x' }}" media="(max-width: 600px)">
+                <img src="{{ block.settings.image | img_url: '1500x' }}" alt="{{ block.settings.image.alt }}">
+              </picture>
+              
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Image Slider",   
+    "blocks": [
+      {
+        "type": "text",
+        "name": "Image",
+        "settings": [
+          {
+            "id": "image",
+            "type": "image_picker",
+            "label": "Image"
+          },
+          {
+            "id": "image_mobile",
+            "type": "image_picker",
+            "label": "Image Mobile"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image Slider",
+        "category": "saltbone"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+  section.image-slider {
+    background-color: var(--color-gray);
+    padding: 0 45px 75px;
+    .content-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+
+      .swiper-button-prev {
+        color: var(--color-darkgray);
+        left: -35px;
+        &:after {
+          font-size: 34px;
+          font-weight: 1000;
+        }
+        
+
+      }
+
+      .swiper-button-next {
+        color: var(--color-darkgray);
+        right: -35px;
+        &:after {
+          font-size: 34px;
+          font-weight: 1000;
+        }
+        
+
+      }
+
+      .swiper-pagination {
+        bottom: -45px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        .swiper-pagination-bullet {
+          width: 14px;
+          height: 14px;
+          border: solid 1px var(--color-black);
+          background: white;
+          opacity: 1;
+
+          &.swiper-pagination-bullet-active {
+            background-color: var(--color-black);
+          }
+        }
+      }
+      
+    }
+
+    @media (max-width: 1024px) {
+      padding: 0 0 55px;
+
+      .content-wrapper {
+        .swiper-button-prev {
+          display: none;
+        }
+
+        .swiper-button-next {
+          display: none;
+        }
+
+        .swiper-pagination {
+          bottom: -35px;
+          gap: 10px;
+        }
+      }
+    }
+  }
+{% endstylesheet %}
+
+{% javascript %}
+  const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: true,
+    },
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+{% endjavascript %}

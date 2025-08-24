@@ -1,0 +1,72 @@
+<section class="icon-text">
+  <div class="content-wrapper">
+    <div data-aos="fade-up" data-aos-duration="1500" class="image">
+      <img src="{{ section.settings.image | img_url: '750x' }}" alt="{{ section.settings.image.alt }}">
+    </div>
+    <div data-aos="fade-up" data-aos-duration="1500" class="content">
+      {{ section.settings.text }}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Icon Text",
+    "settings": [
+      {
+        "id": "image",
+        "type": "image_picker",
+        "label": "Image"
+      },
+      {
+        "id": "text",
+        "type": "richtext",
+        "label": "Text"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Icon Text",
+        "category": "saltbone"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+  section.icon-text {
+    background-color: var(--color-gray);
+    padding: 45px 45px 65px;
+    .content-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      gap: 45px;
+
+      .image {
+        width: 125px;
+        img {
+          max-width: 90px;
+          margin: 0 auto;
+          animation: ghostFloat 4s infinite;
+        }
+      }
+
+      .content {
+        flex: 1;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      padding: 45px 25px;
+    }
+
+    @media (max-width: 768px) {
+      .content-wrapper {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+      }
+    }
+  }
+{% endstylesheet %}

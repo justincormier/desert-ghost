@@ -1,0 +1,154 @@
+{
+  "sections": {
+    "sb_home_video_hero_RHJdMM": {
+      "type": "sb-home-video-hero",
+      "name": "Home Video Hero",
+      "settings": {
+        "video": "shopify:\/\/files\/videos\/2932297-uhd_4096_2160_24fps.mp4",
+        "product_image": "shopify:\/\/shop_images\/Card-Bastard_056e59e6-081b-4572-bb01-35aaff312854.png",
+        "heading": "HANDCRAFTED & DESERT-AGED IN MARATHON, TEXAS",
+        "button_url": "#",
+        "button_label": "SHOP NOW"
+      }
+    },
+    "wysiwyg_V6KA7N": {
+      "type": "wysiwyg",
+      "name": "WYSIWYG",
+      "settings": {
+        "text": "<h3>Small Batch Bourbon Handcrafted & Desert-Aged In Marathon, Texas<\/h3><p>In the 1880s, Benjamin Franklin Roberts was carving out a life in the unforgiving Texas desert, moving cattle and horses back and forth across the border. He distilled his family’s original Tennessee whiskey to barter with the Mexicans, soldiers, and Indians that inhabited this remote area. Few people would have made the choice to live here, but Benjamin Franklin Roberts thrived in the borderlands. <\/p>"
+      }
+    },
+    "image_slider_46cikT": {
+      "type": "image-slider",
+      "blocks": {
+        "text_UERCpC": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Home-slide-Boubon.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/mobile_2.jpg"
+          }
+        },
+        "text_MxVHjz": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Home-slide-BeeKeeper.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/mobile_1.jpg"
+          }
+        },
+        "text_nGxDL4": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Home-slide-DistNight.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/mobile_4.jpg"
+          }
+        },
+        "text_LJn3HT": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Home-slide-OldFashioed.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/mobile_5.jpg"
+          }
+        },
+        "text_PPWWMw": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Home-slide-Desert.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/mobile_3.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "text_UERCpC",
+        "text_MxVHjz",
+        "text_nGxDL4",
+        "text_LJn3HT",
+        "text_PPWWMw"
+      ],
+      "name": "Image Slider",
+      "settings": {}
+    },
+    "icon_text_Xq9GK7": {
+      "type": "icon-text",
+      "name": "Icon Text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_1205.svg",
+        "text": "<p>After six generations, his spirit returns to the desert in this 145-year-old recipe. Like BFR, we stubbornly believe whiskey should be as pure and straightforward as possible, so all of our whiskeys begin with the same mash bill that he distilled back in the 1880s. Then, we desert-age our spirits in custom-made, charred white oak barrels deep in the Chihuahuan Desert. The extreme daily temperature fluctuations in this unique environment create a smooth and complex tasting experience with a smooth finish—uniquely crafted by Desert Ghost.<\/p><p>From our flagship, The Bastard Bourbon, to our Texas Straight Bourbon whiskey and our delicious Honey Bourbon, our spirits have impressed even the most discerning guests. And that’s before we roll out the Bastard Black label, which is truly something to savor. If you can’t make it down to West Texas for a whiskey flight, order up a bottle here and join the growing group of believers in Desert Ghost, the spirit of the borderlands.<\/p>"
+      }
+    },
+    "product_grid_ydFrTG": {
+      "type": "product-grid",
+      "blocks": {
+        "product_QaPKgU": {
+          "type": "product",
+          "settings": {
+            "title": "THE BASTARD BOURBON™",
+            "stat_1": "AGED 4 YEARS",
+            "stat_2": "92 PROOF",
+            "stat_3": "750 ML",
+            "description": "With roots dating back to the 1880s, The Bastard Bourbon is our flagship brand. Delivering a smooth & complex flavor with gentle spiciness and a sweet oak aroma,",
+            "button_label": "SHOP NOW",
+            "button_url": "#",
+            "image": "shopify:\/\/shop_images\/Card-Bastard_b41a9ac9-cf2d-47c0-a71b-f3b532b1706d.png"
+          }
+        },
+        "product_C4rjnd": {
+          "type": "product",
+          "settings": {
+            "title": "DESERT GHOST HONEY BOURBON",
+            "stat_1": "AGED 3 YEARS",
+            "stat_2": "90 PROOF",
+            "stat_3": "750 ML",
+            "description": "We start with our Texas Straight Small Batch Bourbon Whiskey, and then we infuse it with Big Bend Honey Company’s wild desert honey. The result is a velvety smooth bourbon with a subtle honey finish.",
+            "button_label": "SHOP NOW",
+            "button_url": "#",
+            "image": "shopify:\/\/shop_images\/Card-Honey_Bourbon.png"
+          }
+        },
+        "product_XA4yKg": {
+          "type": "product",
+          "settings": {
+            "title": "DESERT GHOST TEXAS BOURBON WHISKEY",
+            "stat_1": "AGED 3 YEARS",
+            "stat_2": "92 PROOF",
+            "stat_3": "750 ML",
+            "description": "Small batch bourbon whiskey, triple filtered through local mesquite and oak charcoal, then desert aged in charred new white oak barrels for three years.",
+            "button_label": "SHOP NOW",
+            "button_url": "#",
+            "image": "shopify:\/\/shop_images\/Texas_Whiskey.png"
+          }
+        },
+        "product_Azx6eR": {
+          "type": "product",
+          "settings": {
+            "title": "THE BASTARD BOURBON BLACK",
+            "stat_1": "AGED 5 YEARS",
+            "stat_2": "122 PROOF",
+            "stat_3": "750 ML",
+            "description": "Our original mash bill from the 1880s, Bastard Black, is our Cask Strength top-of-the-line Bourbon. This is an experience to be savored.",
+            "button_label": "SHOP NOW",
+            "button_url": "#",
+            "image": "shopify:\/\/shop_images\/Bastard_Black.png"
+          }
+        }
+      },
+      "block_order": [
+        "product_QaPKgU",
+        "product_C4rjnd",
+        "product_XA4yKg",
+        "product_Azx6eR"
+      ],
+      "name": "Product Grid",
+      "settings": {
+        "heading": "OUR WHISKEY",
+        "background_image": "shopify:\/\/shop_images\/background-temp.jpg"
+      }
+    }
+  },
+  "order": [
+    "sb_home_video_hero_RHJdMM",
+    "wysiwyg_V6KA7N",
+    "image_slider_46cikT",
+    "icon_text_Xq9GK7",
+    "product_grid_ydFrTG"
+  ]
+}

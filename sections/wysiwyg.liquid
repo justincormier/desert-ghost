@@ -1,0 +1,43 @@
+<section class="wysiwyg">
+  <div data-aos="fade-up" data-aos-duration="1000" class="content-wrapper">
+    {{ section.settings.text }}
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "WYSIWYG",
+    "settings": [
+      {
+        "id": "text",
+        "type": "richtext",
+        "label": "Text"
+      }
+    ],
+    "presets": [
+      {
+        "name": "WYSIWYG",
+        "category": "saltbone"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+section.wysiwyg {
+  padding: 65px 45px;
+  background-color: var(--color-gray);
+  
+  .content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 45px 25px;
+  }
+
+}
+
+{% endstylesheet %}

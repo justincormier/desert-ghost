@@ -1,0 +1,214 @@
+
+
+<section class="home-product-grid" style="background-image: url('{{ section.settings.background_image | img_url: '1920x' }}')">
+  <div class="content-wrapper">
+    <h2>{{ section.settings.heading }}</h2>
+    <div class="saltbone-grid">
+      {% for block in section.blocks %}
+        <div class="grid-item">
+          <div class="image">
+            <img data-aos="fade-up" data-aos-duration="1500" src="{{ block.settings.image | img_url: '750x' }}" alt="{{ block.settings.image.alt }}">
+          </div>
+          <div data-aos="fade-up" data-aos-duration="1500" data-aos-delay="250" class="details">
+            <h4>{{ block.settings.title }}</h4>
+            <div class="stats">
+              <div class="stat">
+                {% render 'icon-diamond-bullet-point' %}{{ block.settings.stat_1 }}
+              </div>
+              <div class="stat">
+                {% render 'icon-diamond-bullet-point' %}{{ block.settings.stat_2 }}
+              </div>
+              <div class="stat">
+                {% render 'icon-diamond-bullet-point' %}{{ block.settings.stat_3 }}
+              </div>
+            </div>
+            <div class="description">
+              <p>{{ block.settings.description }}</p>
+            </div>
+            <div class="button-wrapper">
+              <a href="{{ block.settings.button_url }}" class="btn square">{{ block.settings.button_label }}</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Product Grid",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+      },
+      {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Background Image"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "product",
+        "name": "Product",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Product Title"
+          },
+          {
+            "type": "text",
+            "id": "stat_1",
+            "label": "Stat 1"
+          },
+          {
+            "type": "text",
+            "id": "stat_2",
+            "label": "Stat 2"
+          },
+          {
+            "type": "text",
+            "id": "stat_3",
+            "label": "Stat 3"
+          },
+          {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description"
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "Button Label"
+          },
+          {
+            "type": "url",
+            "id": "button_url",
+            "label": "Button URL"
+          },
+          {
+            "id": "image",
+            "type": "image_picker",
+            "label": "Image"
+          }  
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product Grid",
+        "category": "saltbone"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+  section.home-product-grid {
+    padding: 85px 45px 125px;
+    background-size: cover;
+    background-color: black;
+
+    .content-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+
+      h2 {
+        color: var(--color-gray);
+        text-align: center;
+        margin-bottom: 65px;
+      }
+
+      .saltbone-grid {
+        display: grid;
+        grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+        gap: 115px;
+
+        .grid-item {
+          display: flex;
+          align-items: center;
+          gap: 25px;
+          .image {
+            width: 33.33%;
+            img {
+              width: 100%;
+              max-width: 250px;
+              max-height: 475px;
+            }
+          }
+
+          .details {
+            width: 66.66%;
+            h4 {
+              font-size: 18px;
+              line-height: 22px;
+              color: var(--color-gray);
+              font-weight: 800;
+              letter-spacing: 1px;
+              margin-bottom: 15px;
+            }
+
+            .stats {
+              padding-left: 15px;
+              margin-bottom: 10px;
+
+              .stat {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                color: var(--color-gold);
+                font-size: 14px;
+                font-weight: 300;
+
+                svg {
+                  width: 6px;
+                  height: 6px;
+                }
+              }
+            }
+
+            .description {
+              margin-bottom: 35px;
+              p {
+                color: var(--color-gold);
+                font-family: 'Barlow Condensed', sans-serif;  
+                max-width: 300px;   
+                font-size: 18px;
+                line-height: 22px;        
+              }
+            }
+          }
+
+
+        }
+      }
+    }
+
+    @media (max-width: 1024px) {
+      padding: 65px 25px 85px;
+      .content-wrapper {
+        .saltbone-grid {
+          gap: 85px;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      .content-wrapper {
+        .saltbone-grid {
+          gap: 65px;
+          grid-template-columns: minmax(0,1fr);
+
+          .grid-item {
+            max-width: 425px;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+{% endstylesheet %}
