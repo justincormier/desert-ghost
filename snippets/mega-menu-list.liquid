@@ -66,6 +66,7 @@
   data-menu-list-id="{{ id }}"
   class="mega-menu__list list-unstyled"
   style="--menu-image-border-radius: {{ image_border_radius }}px;"
+  data-menu-title="{{ parent_link.title | handleize }}"
 >
   {% for link in parent_link.links %}
     {% liquid
@@ -170,6 +171,17 @@
     %}
   {% endfor %}
 </ul>
+
+<div class="menu-content">
+  {% assign megaMenuItem = shop.metaobjects["mega_menu"][parent_link.handle] %}
+  <div class="text">
+    <p>{{ megaMenuItem.text.value }}</p>
+  </div>
+  <div class="image">
+    <img src="{{ megaMenuItem.image | img_url: '750x' }}" alt="{{ megaMenuItem.image.alt }}">
+  </div>
+</div>
+
 
 {% liquid
   # decide how many grid columns are needed for the menu list, and how many columns are needed for the featured content

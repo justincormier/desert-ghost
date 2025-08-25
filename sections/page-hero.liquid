@@ -1,0 +1,133 @@
+<section class="page-hero" style="background-image: url('{{ section.settings.background_image | img_url: '1920x' }}');">
+  <div class="content">
+    {% if section.settings.quote != blank %}
+      <h2 data-aos="fade-up" data-aos-duration="1500">{{ section.settings.quote }}</h2>
+    {% endif %}
+    {% if section.settings.quote_source %}
+      <h5 data-aos="fade-up" data-aos-duration="1500" data-aos-delay="150">{{ section.settings.quote_source }}</h5>
+    {% endif %}
+    {% if section.settings.logo != blank %}
+      <img data-aos="fade-up" data-aos-duration="1500" data-aos-delay="250" src="{{ section.settings.logo | img_url: '500x' }}" alt="{{ section.settings.logo.alt }}">
+    {% endif %}
+  </div>
+
+  <h1>{{ page.title }}</h1>
+  
+
+  <style>
+    @media (max-width: 768px) {
+      section.page-hero {
+        background-image: url('{{ section.settings.background_image_mobile | img_url: '900x' }}'); 
+      }
+    }
+  </style>
+</section>
+
+{% schema %}
+  {
+    "name": "Page Hero",
+    "settings": [
+      {
+        "id": "quote",
+        "type": "text",
+        "label": "Quote"
+      },
+      {
+        "id": "quote_source",
+        "type": "text",
+        "label": "Quote Source"
+      },
+      {
+        "id": "logo",
+        "type": "image_picker",
+        "label": "Logo"
+      },
+      {
+        "id": "background_image",
+        "type": "image_picker",
+        "label": "Background Image"
+      },
+      {
+        "id": "background_image_mobile",
+        "type": "image_picker",
+        "label": "Background Image Mobile"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Page Hero",
+        "category": "saltbone"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+  section.page-hero {
+    padding: 0 35px;
+    background-size: cover;
+    height: 600px;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h2 {
+        font-size: 26px;
+        line-height: 36px;
+        font-weight: 400;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      h5 {
+        font-family: 'Barlow Condensed', sans-serif;
+        text-align: center;
+
+      }
+      
+
+      img {
+        width: 65px;
+        display: block;
+        margin-top: 25px;
+      }
+    }
+
+    h1 {
+      color: white;
+      position: absolute;
+      bottom: 65px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      text-align: center;
+    }
+
+    @media (max-width: 1024px) {
+      padding: 0 25px;
+      height: 500px;
+
+      h1 {
+        bottom: 25px;
+      }
+
+      .content {
+        margin-top: -35px;
+        img {
+          margin-top: 15px;
+          width: 55px;
+        }
+      }
+    }
+  }
+{% endstylesheet %}

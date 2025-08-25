@@ -1,0 +1,91 @@
+<section class="text-image-wide">
+  <div class="content-wrapper">
+    <div data-aos="fade-up" data-aos-duration="1500" class="text">
+      {{ section.settings.text }}
+    </div>
+    <div data-aos="fade-up" data-aos-duration="1500" class="image">
+      <img src="{{ section.settings.image | img_url: '1500x' }}" alt="{{ section.settings.image.alt }}">
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Text Image Wide",
+    "settings": [
+      {
+        "id": "text",
+        "type": "richtext",
+        "label": "Text"
+      },
+      {
+        "id": "image",
+        "type": "image_picker",
+        "label": "Image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Text Image Wide",
+        "category": "saltbone"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+  section.text-image-wide {
+    padding: 45px 35px;
+    background-color: var(--color-gray);
+
+    .content-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 45px;
+      max-width: 1200px;
+      margin: 0 auto;
+      .text {
+        width: 25%;
+      }
+
+      .image {
+        width: 75%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    @media (max-width: 1024px) {
+      padding: 45px 25px;
+      .content-wrapper {
+        .text {
+          width: 40%;
+        }
+
+        .image {
+          width: 60%;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding: 45px 0;
+      .content-wrapper {
+        flex-direction: column-reverse;
+        gap: 35px;
+
+        .text {
+          width: 100%;
+          text-align: center;
+          padding: 0 25px;
+        }
+
+        .image {
+          width: 100%;
+        }
+      }
+    }
+    
+  }
+{% endstylesheet %}

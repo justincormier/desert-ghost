@@ -1,0 +1,136 @@
+<section class="alternating-image-text">
+  <div class="content-wrapper">
+    {% for block in section.blocks %}
+      <div class="row">
+        <div data-aos="fade-up" data-aos-duration="1500" class="content">
+          <h5>{{ block.settings.heading }}</h5>
+          <p>{{ block.settings.text }}</p>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1500" class="image">
+          <img src="{{ block.settings.image | img_url: '1000x' }}" alt="{{ block.settings.image.alt }}">
+          {% if block.settings.button_url != blank %}
+            <a href="{{ block.settings.button_url }}" class="btn">{{ block.settings.button_label }}</a>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Alternating Image Text",
+    "blocks": [
+      {
+        "type": "text",
+        "name": "Content Row",
+        "settings": [  
+          {
+            "id": "heading",
+            "type": "text",
+            "label": "Heading"
+          },   
+          {
+            "id": "text",
+            "type": "richtext",
+            "label": "Text"
+          },
+          {
+            "id": "button_url",
+            "type": "url",
+            "label": "Button URL"
+          },
+          {
+            "id": "button_label",
+            "type": "text",
+            "label": "Button Label"
+          },
+          {
+            "id": "image",
+            "type": "image_picker",
+            "label": "Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Alternating Image Text",
+        "category": "saltbone"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+  section.alternating-image-text {
+    padding: 65px 35px;
+    background-color: var(--color-gray);
+
+    .content-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+
+      .row {
+        display: flex;
+        align-items: center;
+        gap: 45px;
+        margin-bottom: 75px;
+
+        .image {
+          width: 60%;
+          position: relative;
+          
+          a.btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+          }
+        }
+
+        .content {
+          width: 40%;
+
+          h5 {
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: var(--color-darkblue);
+          }
+        }
+
+        &:nth-of-type(even) {
+          flex-direction: row-reverse;
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    @media (max-width: 1024px) {
+      padding: 45px 25px;
+    }
+
+    @media (max-width: 768px) {
+      padding: 45px 0;
+      .content-wrapper {
+        .row {
+          flex-direction: column-reverse !important;
+          margin-bottom: 45px;
+
+          .content {
+            width: 100%;
+            padding: 0 25px;
+            text-align: center;
+          }
+
+          .image {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+{% endstylesheet %}

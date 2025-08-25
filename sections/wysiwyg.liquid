@@ -1,7 +1,15 @@
 <section class="wysiwyg">
-  <div data-aos="fade-up" data-aos-duration="1000" class="content-wrapper">
+  <div data-aos="fade-up" data-aos-duration="1500" class="content-wrapper">
     {{ section.settings.text }}
+    {% if section.settings.button_url %}
+      <div class="button-wrapper">
+        <a href="{{ section.settings.button_url }}" class="btn">
+          {{ section.settings.button_label }}
+        </a>
+      </div>
+    {% endif %}
   </div>
+
 </section>
 
 {% schema %}
@@ -12,6 +20,16 @@
         "id": "text",
         "type": "richtext",
         "label": "Text"
+      },
+      {
+        "id": "button_url",
+        "type": "url",
+        "label": "Button URL"
+      },
+      {
+        "id": "button_label",
+        "type": "text",
+        "label": "Button Label"
       }
     ],
     "presets": [
@@ -24,20 +42,20 @@
 {% endschema %}
 
 {% stylesheet %}
-section.wysiwyg {
-  padding: 65px 45px;
-  background-color: var(--color-gray);
-  
-  .content-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-  }
+  section.wysiwyg {
+    padding: 45px 35px;
+    background-color: var(--color-gray);
+    
+    .content-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      color: #243029;
 
-  @media (max-width: 1024px) {
-    padding: 45px 25px;
+      .button-wrapper {
+        margin-top: 45px;
+      }
+    }
   }
-
-}
 
 {% endstylesheet %}

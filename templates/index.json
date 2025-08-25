@@ -142,6 +142,37 @@
         "heading": "OUR WHISKEY",
         "background_image": "shopify:\/\/shop_images\/background-temp.jpg"
       }
+    },
+    "alternating_image_text_g4JDaJ": {
+      "type": "alternating-image-text",
+      "blocks": {
+        "text_R9dPr4": {
+          "type": "text",
+          "settings": {
+            "heading": "STOP BY AND STAY AWHILE! YOU'LL FIND US ON THE WESTERN EDGE OF TOWN.",
+            "text": "<p>We take pride in welcoming every person who comes through the door. You never know who will be on the barstool next to you, but we’re pretty sure you’ll leave as friends! There is just something about sipping bourbon in the desert that connects people<\/p>",
+            "button_url": "#",
+            "button_label": "VISIT US",
+            "image": "shopify:\/\/shop_images\/Home-VisitUs.jpg"
+          }
+        },
+        "text_4RpLEA": {
+          "type": "text",
+          "settings": {
+            "heading": "BUILDING A BRAND WE CAN BELIEVE IN",
+            "text": "<p>We always had a desire to create our a brand of our own, but were missing the right spark. We found ourselves too busy to determine what that should be until we discovered a legend that gave us a reason to believe and the tools to make it happen. <\/p>",
+            "button_url": "#",
+            "button_label": "ABOUT US",
+            "image": "shopify:\/\/shop_images\/Group_1234.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "text_R9dPr4",
+        "text_4RpLEA"
+      ],
+      "name": "Alternating Image Text",
+      "settings": {}
     }
   },
   "order": [
@@ -149,6 +180,7 @@
     "wysiwyg_V6KA7N",
     "image_slider_46cikT",
     "icon_text_Xq9GK7",
-    "product_grid_ydFrTG"
+    "product_grid_ydFrTG",
+    "alternating_image_text_g4JDaJ"
   ]
 }

@@ -22,6 +22,7 @@
       "block_order": [
         "announcement_BxgCk9"
       ],
+      "disabled": true,
       "name": "t:names.announcement_bar",
       "settings": {
         "speed": 5,
@@ -40,7 +41,7 @@
           "static": true,
           "settings": {
             "hide_logo_on_home_page": false,
-            "custom_height": 36,
+            "custom_height": 61,
             "custom_height_mobile": 28,
             "padding-block-start": 0,
             "padding-block-end": 0,
@@ -53,7 +54,7 @@
           "type": "_header-menu",
           "static": true,
           "settings": {
-            "menu": "main-menu",
+            "menu": "main-menu-v2",
             "menu_style": "featured_products",
             "featured_products_aspect_ratio": "4 \/ 5",
             "featured_collections_aspect_ratio": "16 \/ 9",
@@ -80,21 +81,21 @@
       },
       "settings": {
         "logo_position": "left",
-        "menu_position": "left",
+        "menu_position": "center",
         "menu_row": "top",
-        "show_search": true,
+        "show_search": false,
         "search_position": "right",
         "search_row": "top",
-        "show_country": true,
+        "show_country": false,
         "country_selector_style": false,
-        "show_language": true,
+        "show_language": false,
         "localization_font": "heading",
         "localization_font_size": "0.875rem",
         "localization_position": "right",
         "localization_row": "top",
         "section_width": "page-width",
         "section_height": "standard",
-        "enable_sticky_header": "always",
+        "enable_sticky_header": "scroll-up",
         "divider_width": 0,
         "divider_size": "page-width",
         "border_width": 0,

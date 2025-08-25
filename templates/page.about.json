@@ -1,0 +1,104 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 12,
+        "color_scheme": "",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "page_hero_U4Enii": {
+      "type": "page-hero",
+      "name": "Page Hero",
+      "settings": {
+        "quote": "To Inhabit This Place Means You’re Tough, Determined & One Lucky Bastard.”",
+        "quote_source": "Benjamin Franklin Roberts",
+        "logo": "shopify:\/\/shop_images\/Group_1205.svg",
+        "background_image": "shopify:\/\/shop_images\/AboutUs-Hero.jpg",
+        "background_image_mobile": "shopify:\/\/shop_images\/AboutUs-Hero_f4007e77-448b-4aeb-852a-341f48cc451d.jpg"
+      }
+    },
+    "wysiwyg_dRGRMn": {
+      "type": "wysiwyg",
+      "name": "WYSIWYG",
+      "settings": {
+        "text": "<h5><strong>OUR DISTILLING PHILOSOPHY<\/strong><\/h5><p>Benjamin Franklin Roberts said “When it comes to making whiskey there’s a right way, a wrong way, and then there is My Way”. By all accounts, the man made damn good whiskey <strong>so all of our whiskeys begin with the same mash bill that he distilled back in the 1800s.<\/strong><\/p>"
+      }
+    },
+    "image_caption_text_HhPk6c": {
+      "type": "image-caption-text",
+      "name": "Image Caption Text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/AboutUs-BFR-Portrait.jpg",
+        "caption": "Benjamin Franklin Roberts",
+        "text": "<p>Like BFR, we stubbornly believe whiskey should be as pure and straightforward as possible. So we turn to the West Texas desert for our ingredients. From local honey to our mesquite char filtering process, we use simply what the desert provides and only enough to craft the exact flavor our spirits demand. Then, we age our spirits in white oak barrels deep in the Chihuahuan Desert, where the temperature swings can reach a 60-degree difference in a day. The variance expands and contracts our oak barrels more rapidly than whiskey barrels in more moderate climates, and accelerates the absorption and release of whiskey from the oak, allowing us to achieve our mature flavor profile in a limited period while sacrificing nothing. The result is a rich, complex whiskey with a smooth finish—uniquely crafted by DesertGhost.<\/p>"
+      }
+    },
+    "text_image_wide_baEQwp": {
+      "type": "text-image-wide",
+      "name": "Text Image Wide",
+      "settings": {
+        "text": "<p><strong>Staying true to the family tradition, each bottle we produce is filled and labeled by hand.<\/strong> We also carefully record the specific batch and barrel number for every bottle. While this process requires extra effort, it honors Benjamin’s distilling methods and ensures we know the origin of each individual barrel from which every bottle comes.<\/p>",
+        "image": "shopify:\/\/shop_images\/Group_1233.jpg"
+      }
+    },
+    "wysiwyg_Q3CMXf": {
+      "type": "wysiwyg",
+      "custom_css": [],
+      "name": "WYSIWYG",
+      "settings": {
+        "text": "<h5><strong>OUR STORY<\/strong><\/h5><p>We have been partners for nearly a decade, during which time we have successfully built brands for ranches, restaurants, music festivals, and outdoor companies. However, we always had a desire to create our own brand, but found ourselves too busy to determine what that should be. Everything changed with a heartfelt phone call from Cody. He shared the incredible discovery of his great-great-grandfather’s mash bill and said,<\/p><p><\/p><p><em><strong>“This is a sign. This is what we were meant to do…let’s build a whiskey brand that holds real meaning.”<\/strong><\/em><\/p>"
+      }
+    },
+    "single_image_wTycrn": {
+      "type": "single-image",
+      "name": "Single Image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/AboutUs-Founders.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/AboutUs-Founders_d647b53b-7c92-4b7e-8074-fed3038b7380.jpg"
+      }
+    },
+    "wysiwyg_kmmaF9": {
+      "type": "wysiwyg",
+      "name": "WYSIWYG",
+      "settings": {
+        "text": "<p>As we explored his ancestors’ story, we were captivated by the legend of a man who transported horses and cattle across the border in the dead of night, navigating through the unforgiving desert, unseen and unnoticed. Living in the desert has its challenges, and we deeply admire the grit and character it took to thrive there in the 1880s. Those qualities resonated with us, and we decided to honor that legacy by naming our brand Desert Ghost.<\/p>"
+      }
+    },
+    "image_caption_text_jgHpxd": {
+      "type": "image-caption-text",
+      "name": "Image Caption Text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/AboutUs-Founders-2.jpg",
+        "caption": "",
+        "text": "<p>The mash bill that Cody found has roots tracing back to the Tennessee hills, where Benjamin Franklin Roberts’ father had learned to create his own whiskey. BFR kept up the family tradition, distilling his own whiskey to sip under the endless stars in the desert sky and bartering it to smooth over disagreements during his desert travels.<\/p><p>Today, the family tradition remains strong. We desert-age the same whiskey in white oak barrels, distilling both his spirit and a piece of the borderlands into everything our brand represents. From Honey Bourbon made with locally sourced desert wildbrush honey to Texas Straight whiskey that is tripled filtered through desert mesquite char, and our flagship The Bastard Bourbon, we remain true to the methods of Benjamin Franklin Roberts.<\/p><p>Raise a glass with us to the spirit of the borderlands!<\/p><p><strong>Cody, Chris & Jeff<\/strong><\/p>"
+      }
+    },
+    "image_button_QpttTb": {
+      "type": "image-button",
+      "name": "Image Button",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/AboutUs-Bourbon.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/AboutUs-Bourbon_0c99395c-7a93-4a43-8481-fbd821b475f0.jpg",
+        "button_url": "#",
+        "button_label": "SHOP NOW"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "page_hero_U4Enii",
+    "wysiwyg_dRGRMn",
+    "image_caption_text_HhPk6c",
+    "text_image_wide_baEQwp",
+    "wysiwyg_Q3CMXf",
+    "single_image_wTycrn",
+    "wysiwyg_kmmaF9",
+    "image_caption_text_jgHpxd",
+    "image_button_QpttTb"
+  ]
+}

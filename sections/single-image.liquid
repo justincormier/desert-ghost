@@ -1,0 +1,51 @@
+<section class="single-image">
+  <div class="content-wrapper">
+    <img data-aos="fade-up" data-aos-duration="1500"
+      src="{{ section.settings.image | img_url: '1920x' }}"
+      srcset="
+        {{ section.settings.image_mobile | img_url: '768x' }} 768w,
+        {{ section.settings.image | img_url: '1920x' }} 1920w
+      "
+      sizes="(max-width: 768px) 768px, 1920px"
+      alt="{{ section.settings.image.alt | escape }}"
+    >
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Single Image",
+    "settings": [
+      {
+        "id": "image",
+        "type": "image_picker",
+        "label": "Image"
+      },
+      {
+        "id": "image_mobile",
+        "type": "image_picker",
+        "label": "Image Mobile"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Single Image",
+        "category": "saltbone"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+  section.single-image {
+    background-color: var(--color-gray);
+    .content-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+{% endstylesheet %}

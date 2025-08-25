@@ -1,0 +1,193 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 12,
+        "color_scheme": "",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "page_hero_HEd9HE": {
+      "type": "page-hero",
+      "name": "Page Hero",
+      "settings": {
+        "quote": "",
+        "quote_source": "",
+        "background_image": "shopify:\/\/shop_images\/Visit-Us-Hero-DT.jpg",
+        "background_image_mobile": "shopify:\/\/shop_images\/VisitUs-MB-hero.jpg"
+      }
+    },
+    "wysiwyg_n4yMbH": {
+      "type": "wysiwyg",
+      "name": "WYSIWYG",
+      "settings": {
+        "text": "<h5><strong>VISIT OUR DISTILLERY!<\/strong><\/h5><p>Stop in for the Bourbon and stay for the atmosphere! Desert Ghost embodies the spirit of the borderlands, and you’ll see that spirit come to life in our tasting room and our community. From locals who have spent their whole lives here in Marathon, to Big Bend visitors and international tourists and celebrities, we take pride in welcoming every person who comes through the door. You never know who will be on the barstool next to you, but we’re pretty sure you’ll leave as friends! There is just something about sipping bourbon in the desert that connects people, and that is one more reason we love this town and our distillery.<\/p>",
+        "button_url": "",
+        "button_label": ""
+      }
+    },
+    "image_button_WhAURq": {
+      "type": "image-button",
+      "custom_css": [
+        "section.image-button {padding-top: 0; padding-bottom: 25px;}"
+      ],
+      "name": "Image Button",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/VisitUs-Cocktail.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/VisitUs-Cocktail_1c42e672-565e-47a5-952b-42f9adce15a6.jpg",
+        "button_url": "#",
+        "button_label": "COCKTAIL MENU"
+      }
+    },
+    "wysiwyg_4qGpDx": {
+      "type": "wysiwyg",
+      "custom_css": [
+        "section.wysiwyg {padding-top: 0; padding-bottom: 45px;}"
+      ],
+      "name": "WYSIWYG",
+      "settings": {
+        "text": "<p>We’ve got something for everyone. Check out our current cocktail list to see what we’re offering right now. <\/p>",
+        "button_url": "",
+        "button_label": ""
+      }
+    },
+    "image_slider_hpaWbN": {
+      "type": "image-slider",
+      "blocks": {
+        "text_R9jRKe": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/VisitUs-slide-Cody.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MB-VisitUs-slide-1.jpg"
+          }
+        },
+        "text_RNrpgX": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/VisitUs-slide-Bar.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MB-VisitUs-slide-Bar.jpg"
+          }
+        },
+        "text_j83iRd": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/VisitUs-slide-Pizza.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MB-VisitUs-slide-Pizza.jpg"
+          }
+        },
+        "text_ng7HmQ": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/VisitUs-slide-Bartender.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MB-VisitUs-slide-Bartender.jpg"
+          }
+        },
+        "text_pJLxcm": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/VisitUs-slide-Marathon.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MB-VisitUs-slide-Marathon.jpg"
+          }
+        },
+        "text_8kJqF4": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/VisitUs-slide-Patio.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MB--VisitUs-slide-Patio.jpg"
+          }
+        },
+        "text_BrxWpd": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/VisitUs-slide-LiveMusic1.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MB-VisitUs-slide-LiveMusic1.jpg"
+          }
+        },
+        "text_kmd6rU": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/VisitUs-slide-PizzaMoz.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MB-VisitUs-slide-PizzaMoz.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "text_R9jRKe",
+        "text_RNrpgX",
+        "text_j83iRd",
+        "text_ng7HmQ",
+        "text_pJLxcm",
+        "text_8kJqF4",
+        "text_BrxWpd",
+        "text_kmd6rU"
+      ],
+      "name": "Image Slider",
+      "settings": {}
+    },
+    "wysiwyg_akceYz": {
+      "type": "wysiwyg",
+      "custom_css": [
+        "section.wysiwyg .content-wrapper p {text-align: left;}"
+      ],
+      "name": "WYSIWYG",
+      "settings": {
+        "text": "<h5><strong>WHY MARATHON<\/strong><\/h5><p>Marathon has a way of taking you by surprise and finding its way into your heart. It happened to us on our first visit to this tiny West Texas town. You meet the locals, explore the town, and find yourself mesmerized by the sun setting over the desert. And then you find yourself wanting more! That’s what happened to us, and we are proud to have the good fortune to be part of Marathon. Even better, we consider ourselves lucky bastards to have been adopted into the community by the wonderful people that live here. Find your way to Marathon and stop in, and don’t be surprised when you find yourself coming back.<\/p>",
+        "button_url": "",
+        "button_label": ""
+      }
+    },
+    "alternating_image_text_eFCGHr": {
+      "type": "alternating-image-text",
+      "blocks": {
+        "text_jGirQD": {
+          "type": "text",
+          "settings": {
+            "heading": "THERE'S ALWAYS SOMETHING HAPPENING AT DESERT GHOST",
+            "text": "<p>It’s hard to find live music out here in the middle of the desert, but we are fortunate enough to have a good rotation of local singer-songwriters and bands to satisfy your live music needs. If you’re someone who wants to be in the spotlight, we also offer karaoke on select nights. Kids and well-behaved dogs are always welcome too! <\/p>",
+            "button_url": "",
+            "button_label": "",
+            "image": "shopify:\/\/shop_images\/IMG_8316.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "text_jGirQD"
+      ],
+      "name": "Alternating Image Text",
+      "settings": {}
+    },
+    "single_image_g8f98t": {
+      "type": "single-image",
+      "name": "Single Image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/VisitUs-Private.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/VisitUs-Private_959a5ba4-9c64-4098-856c-9fe604bcbef1.jpg"
+      }
+    },
+    "wysiwyg_zg6chN": {
+      "type": "wysiwyg",
+      "name": "WYSIWYG",
+      "settings": {
+        "text": "<h5><strong>PRIVATE EVENTS<\/strong><\/h5><p>Our tasting room can accommodate parties of up to 60 people, and our patio offers even more space, making it a great place to watch the sunset. If you are looking to host a private tasting or other event, please give us a call. <\/p>",
+        "button_url": "#",
+        "button_label": "CONTACT US"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "page_hero_HEd9HE",
+    "wysiwyg_n4yMbH",
+    "image_button_WhAURq",
+    "wysiwyg_4qGpDx",
+    "image_slider_hpaWbN",
+    "wysiwyg_akceYz",
+    "alternating_image_text_eFCGHr",
+    "single_image_g8f98t",
+    "wysiwyg_zg6chN"
+  ]
+}

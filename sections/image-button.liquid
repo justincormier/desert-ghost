@@ -1,0 +1,79 @@
+<section class="image-button">
+  <div data-aos="fade-up" data-aos-duration="1500" class="content-wrapper">
+    <img
+      src="{{ section.settings.image | img_url: '1920x' }}"
+      srcset="
+        {{ section.settings.image_mobile | img_url: '768x' }} 768w,
+        {{ section.settings.image | img_url: '1920x' }} 1920w
+      "
+      sizes="(max-width: 768px) 768px, 1920px"
+      alt="{{ section.settings.image.alt | escape }}"
+    >
+    <a href="{{ section.settings.button_url }}" class="btn">{{ section.settings.button_label }}</a>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Image Button",
+    "settings": [
+      {
+        "id": "image",
+        "type": "image_picker",
+        "label": "Image"
+      },
+      {
+        "id": "image_mobile",
+        "type": "image_picker",
+        "label": "Image Mobile"
+      },
+      {
+        "id": "button_url",
+        "type": "url",
+        "label": "Button URL"
+      },
+      {
+        "id": "button_label",
+        "type": "text",
+        "label": "Button Label"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image Button",
+        "category": "saltbone"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+  section.image-button {
+    padding: 65px 0;
+    background-color: var(--color-gray);
+    .content-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+
+      img {
+        width: 100%;
+      }
+
+      a.btn {
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    @media (max-width: 1024px) {
+      padding: 45px 0;
+    }
+
+    @media (max-width: 768px) {
+      padding: 45px 0;
+    }
+  }
+{% endstylesheet %}

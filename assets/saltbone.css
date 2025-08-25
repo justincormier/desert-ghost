@@ -30,10 +30,6 @@
   }
 }
 
-body {
-  min-height: 300vh;
-}
-
 h1 {
   font-size: 42px;
   font-weight: 600;
@@ -57,10 +53,23 @@ h3 {
   color: var(--color-black);
 }
 
+h4 {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+h5 {
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0 0 10px;
+  letter-spacing: 1px;
+}
+
 p {
   font-size: 16px;
   font-weight: 400;
   color: var(--color-black);
+  margin: 0 0 7px;
 }
 
 a.btn {
@@ -69,7 +78,7 @@ a.btn {
   padding: 5px 45px 7px;
   border: solid 2px transparent;
   border-radius: 9px;
-  font-size: 16px;
+  font-size: 22px;
   line-height: 22px;
   font-weight: 800;
   letter-spacing: 3px;
@@ -90,3 +99,122 @@ a.btn {
     padding: 5px 35px 7px;
   }
 }
+
+header {
+  .header__row {
+    background-color: var(--color-darkblue);
+
+    a.menu-list__link {
+      .menu-list__link-title {
+        color: var(--color-white);
+      }
+
+      &[aria-expanded="true"] {
+        .menu-list__link-title {
+          color: var(--color-gold);
+        }
+      }
+    }
+
+    .menu-list__submenu {
+      background-color: var(--color-darkblue);
+
+      a.mega-menu__link  {
+        color: var(--color-white);
+      }
+    }
+  }
+}
+
+header-menu {
+
+  overflow-list {
+    --menu-horizontal-gap: 25px;
+  }
+
+  a.menu-list__link {
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 3px;
+
+    &[aria-haspopup="true"]{
+      &:after {
+
+      }
+    }
+  }
+}
+
+.mega-menu__grid.saltbone-mega-menu {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  padding: 45px 0;
+
+
+  ul {
+    width: 40%;
+    border-right: solid 1px #A49170;
+    
+    a.mega-menu__link  {
+      margin-bottom: 15px;
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      &:hover {
+        color: var(--color-gold);
+      }
+    }
+  }
+
+  .menu-content {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    padding: 0 0 0 45px;
+
+    .text {
+      width: 50%;
+      p {
+        color: var(--color-gold);
+        text-wrap: wrap;
+        text-align: center;
+        font-family: 'Barlow Condensed', sans-serif;
+      }
+    }
+
+    .image {
+      width: 50%;
+      img {
+        width: 100%;
+        max-width: 225px;
+      }
+    }
+  }
+}
+
+/* Stop the white megamenu strip repaint */
+  header-menu { 
+    --submenu-animation-speed: 0ms !important;
+  }
+
+  /* Don’t render the submenu container when closed */
+  header-menu[aria-expanded="false"] .menu-list__submenu {
+    display: none !important;
+  }
+
+  /* Kill the mask pseudo-element Horizon uses */
+  header-menu::before,
+  header-menu::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  /* Belt-and-suspenders: never paint white in the subtree */
+  header-menu,
+  header-menu * {
+    background: var(--color-darkblue) !important;
+    box-shadow: none !important;
+  }
+

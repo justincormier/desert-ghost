@@ -1,0 +1,262 @@
+<div data-aos="fade-up" data-aos-duration="1500" class="newsletter">
+  <div class="content-wrapper">
+    <h5>{{ section.settings.newsletter_heading }}</h5>
+    <div class="text">
+      {{ section.settings.newsletter_text }}
+    </div>
+    <div class="newsletter-embed">
+      {{ section.settings.newsletter_embed }}
+    </div>
+  </div>
+</div>
+
+<footer class="saltbone-footer" style="background-image: url('{{ section.settings.background_image | img_url: '1920x' }}');">
+  <div class="content-wrapper">
+    <a class="logo-link" href="{{ shop.url }}">
+      <img src="{{ section.settings.footer_logo | img_url: '1000x' }}" alt="{{ section.settings.footer_logo.alt }}">
+    </a>
+    <div class="social-links">
+      {% for block in section.blocks %}
+        <a href="{{ block.settings.social_url }}" class="social-link" target="_blank">
+          <img src="{{ block.settings.social_logo | img_url: '100x' }}" alt="{{ block.settings.social_logo.alt }}">
+        </a>
+      {% endfor %}
+    </div>
+    {% if section.settings.footer_menu %}
+      <nav class="footer-menu">
+        <ul>
+          {% for link in linklists[section.settings.footer_menu].links %}
+            <li>
+              <a href="{{ link.url }}">{{ link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
+    <a href="{{ section.settings.address_url  }}" class="address" target="_blank">
+      {{ section.settings.address }}
+    </a>
+    <div class="hours-wrapper">
+      {{ section.settings.hours }}
+      <p class="notice">*hours are subject to change</p>
+    </div>
+  </div>  
+</footer>
+<div class="copyright">
+  <p>&copy; {{ 'now' | date: '%Y' }} Desert Ghost Distilling LLC. All Rights Reserved.</p>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Footer",
+    "settings": [
+      {
+        "id": "background_image",
+        "type": "image_picker",
+        "label": "Background Image"
+      },
+      {
+        "id": "footer_logo",
+        "type": "image_picker",
+        "label": "Footer Logo"
+      },
+      {
+        "id": "footer_menu",
+        "type": "link_list",
+        "label": "Footer Menu"
+      },
+      {
+        "id": "address",
+        "type": "richtext",
+        "label": "Address"
+      },
+      {
+        "id": "address_url",
+        "type": "url",
+        "label": "Address URL"
+      },
+      {
+        "id": "hours",
+        "type": "richtext",
+        "label": "Hours"
+      },
+      {
+        "id": "newsletter_heading",
+        "type": "text",
+        "label": "Newsletter Heading"
+      },
+      {
+        "id": "newsletter_text",
+        "type": "richtext",
+        "label": "Newsletter Text"
+      },
+      {
+        "id": "newsletter_embed",
+        "type": "html",
+        "label": "Newsletter Embed"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "Social Link",
+        "settings": [
+          {
+            "id": "social_url",
+            "type": "url",
+            "label": "Social URL"
+          },
+          {
+            "id": "social_logo",
+            "type": "image_picker",
+            "label": "Social Logo"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Footer"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+  .newsletter {
+    padding: 85px 35px 85px;
+    background: white;
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h5 {
+        margin-bottom: 10px;
+        text-align: center;
+        font-weight: 800;
+      }
+
+      .text {
+        h4 {
+          text-align: center;
+          max-width: 700px;
+        }
+      }
+    }
+  }
+
+  footer.saltbone-footer {
+    background-size: cover;
+    background-position: center;
+    padding: 65px 35px;
+
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      a.logo-link {
+        margin-bottom: 45px;
+        img {
+          width: 100%;
+          max-width: 850px;
+        }
+      }
+
+      .social-links {
+        display: flex;
+        gap: 35px;
+        align-items: center;
+        margin-bottom: 35px;
+
+        img {
+          max-width: 22px;
+          max-height: 22px;
+        }
+      }
+
+      .footer-menu {
+        margin-bottom: 55px;
+        ul {
+          margin: 0;
+          padding: 0;
+
+          li {
+            list-style: none;
+            text-align: center;
+            margin-bottom: 35px;
+
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+
+            a {
+              font-size: 18px;
+              font-weight: 800;
+              color: white;
+              letter-spacing: 1px;
+            }
+          }
+        }
+      }
+
+      a.address {
+        margin-bottom: 25px;
+        p {
+          color: white;
+          font-size: 18px;
+          font-weight: 800;
+        }
+        
+      }
+
+      .hours-wrapper {
+        text-align: center;
+        p {
+          color: white;
+          font-size: 18px;
+          font-weight: 400;
+
+          &.notice {
+            font-size: 12px;
+            font-style: italic;
+            line-height: 12px;
+            margin-top: 20px;
+          }
+
+        }
+      }
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    padding: 15px 25px;
+    background: white;
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .newsletter {
+      padding: 65px 25px;
+    }
+
+    footer.saltbone-footer {
+      padding: 45px 25px;
+    }
+
+    .copyright {
+      padding: 10px 25px;
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+{% endstylesheet %}

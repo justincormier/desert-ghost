@@ -1,0 +1,95 @@
+<section class="image-caption-text">
+  <div class="content-wrapper">
+    <div data-aos="fade-up" data-aos-duration="1500" class="image">
+      <img src="{{ section.settings.image | img_url: '1000x' }}" alt="{{ section.settings.image.alt }}">
+      {% if section.settings.caption %}
+        <p class="caption">{{ section.settings.caption }}</p>
+      {% endif %}
+    </div>
+    <div data-aos="fade-up" data-aos-duration="1500" class="text">
+      {{ section.settings.text }}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Image Caption Text",
+    "settings": [
+      {
+        "id": "image",
+        "type": "image_picker",
+        "label": "Image"
+      },
+      {
+        "id": "caption",
+        "type": "text",
+        "label": "Caption"
+      },
+      {
+        "id": "text",
+        "type": "richtext",
+        "label": "Text"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image Caption Text",
+        "category": "saltbone"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+  section.image-caption-text {  
+    background-color: var(--color-gray);
+    padding: 0 35px;
+
+    .content-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 45px;
+      .image {
+        width: 33.33%;
+        img {
+          width: 100%;
+        }
+
+        p.caption {
+          text-align: center;
+          font-weight: 700;
+          font-style: italic;
+        }
+      }
+
+      .text {
+        width: 66.66%;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      padding: 0 25px;
+    }
+
+    @media (max-width: 768px) {
+      .content-wrapper {
+        flex-direction: column;
+        gap: 35px;
+        .image {
+          width: 100%;
+          padding: 0 10px;
+          max-width: 550px;
+          margin: 0 auto;
+        }
+
+        .text {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+{% endstylesheet %}

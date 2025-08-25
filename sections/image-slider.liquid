@@ -1,5 +1,5 @@
 <section class="image-slider">
-  <div data-aos="fade-up" data-aos-duration="1000" class="content-wrapper">
+  <div data-aos="fade-up" data-aos-duration="1500" class="content-wrapper">
     <div class="swiper-container">
       <div class="swiper-wrapper">
         {% for block in section.blocks %}
@@ -128,6 +128,7 @@
 {% javascript %}
   const swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
+    autoHeight: true,
     autoplay: {
       delay: 5000,
       disableOnInteraction: true,
