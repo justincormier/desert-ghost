@@ -92,6 +92,7 @@
         ],
         "settings": {
           "background_image": "shopify:\/\/shop_images\/Footer-Main.jpg",
+          "background_image_mobile": "shopify:\/\/shop_images\/IMG_0604.jpg",
           "footer_logo": "shopify:\/\/shop_images\/Group_1127.png",
           "footer_menu": "footer",
           "address": "<p>303 NW 1st St, Marathon, TX 79842<\/p>",
@@ -146,7 +147,7 @@
       },
       "scheme-2": {
         "settings": {
-          "background": "#f5f5f5",
+          "background": "#f4f4f4",
           "foreground_heading": "#000000",
           "foreground": "#000000cf",
           "primary": "#000000cf",

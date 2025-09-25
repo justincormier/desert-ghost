@@ -39,6 +39,53 @@
     {% endif %}
 
     {{ content_for_header }}
+    <!-- BottleNexus Global Script -->
+    <script type="text/javascript">
+      (function () {
+          window.BottleNexus ? BottleNexusInit() : loadScript();
+          function loadScript() {
+              var script = document.createElement('script');
+              script.async = true;
+              script.src = 'https://buybutton.bottlenexus.com/buybutton.min.js?v=' + Date.now();
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+              script.onload = BottleNexusInit;
+          }
+          function BottleNexusInit() {
+              BottleNexus.init().setConfig({
+                  token: 'acbae3ba-62b4-11f0-93ed-0242ac110002',
+                  options: {
+                    "iframe": true,
+                    "layout": "basic",
+                    "behavior": "sidebar",
+                    "buttonRadius": 5,
+                    "buttonFontSize": 16,
+                    "buttonWidth": 250,
+                    "buttonAlignment": "center",
+                    "buttonText": "Add to cart",
+                    "buttonTextColor": "#FFFFFFFF",
+                    "buttonBackground": "#27AE60FF",
+                    "initialQuantity": 1,
+                    "cartButtonRadius": 5,
+                    "cartCheckoutBackgroundColor": "#27AE60FF",
+                    "cartCheckoutBackgroundDisabledColor": "#B2B2B2FF",
+                    "cartCheckoutTextColor": "#FFFFFFFF",
+                    "cartHeadingText": "Cart",
+                    "cartCheckoutText": "Checkout",
+                    "cartEmptyText": "No products added",
+                    "cartAdditionalInformationText": "",
+                    "cartBackgroundColor": "#FEFEFEFF",
+                    "cartTextColor": "#000000FF",
+                    "showInput": true,
+                    "utm": {
+                        "source": "BuyButton"
+                    },
+                    "donation": "no_donation",
+                    "styles": {}
+                  }
+                });
+              }
+        })();
+    </script>
   </head>
 
   <body class="page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }}">

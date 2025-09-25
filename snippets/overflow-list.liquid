@@ -7,7 +7,7 @@
   @param {string} [ref] - The ref that is set on the overflow-list element.
 {%- enddoc -%}
 
-<overflow-list
+<overflow-list-disable
   {% if ref %}
     ref="{{ ref }}"
   {% endif %}
@@ -60,4 +60,4 @@
   </template>
 
   {{ children }}
-</overflow-list>
+</overflow-list-disable>

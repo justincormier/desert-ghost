@@ -4,9 +4,8 @@
       "type": "sb-home-video-hero",
       "name": "Home Video Hero",
       "settings": {
-        "video": "shopify:\/\/files\/videos\/2932297-uhd_4096_2160_24fps.mp4",
-        "product_image": "shopify:\/\/shop_images\/Card-Bastard_056e59e6-081b-4572-bb01-35aaff312854.png",
-        "heading": "HANDCRAFTED & DESERT-AGED IN MARATHON, TEXAS",
+        "video": "shopify:\/\/files\/videos\/DGD-Hero-vid-DT-v1 (1).mp4",
+        "video_mobile": "shopify:\/\/files\/videos\/DGD-Hero-Vid-MB-V2.mp4",
         "button_url": "#",
         "button_label": "SHOP NOW"
       }
@@ -15,54 +14,80 @@
       "type": "wysiwyg",
       "name": "WYSIWYG",
       "settings": {
-        "text": "<h3>Small Batch Bourbon Handcrafted & Desert-Aged In Marathon, Texas<\/h3><p>In the 1880s, Benjamin Franklin Roberts was carving out a life in the unforgiving Texas desert, moving cattle and horses back and forth across the border. He distilled his family’s original Tennessee whiskey to barter with the Mexicans, soldiers, and Indians that inhabited this remote area. Few people would have made the choice to live here, but Benjamin Franklin Roberts thrived in the borderlands. <\/p>"
+        "text": "<h3>Small Batch Bourbon Handcrafted & Desert-Aged In Marathon, Texas<\/h3><p>In the 1880s, Benjamin Franklin Roberts was carving out a life in the unforgiving Texas desert, moving cattle and horses back and forth across the border. He distilled his family’s original Tennessee whiskey to barter with the Mexicans, soldiers, and Indians that inhabited this remote area. Few people would have made the choice to live here, but Benjamin Franklin Roberts thrived in the borderlands. <\/p>",
+        "button_url": "",
+        "button_label": ""
       }
     },
     "image_slider_46cikT": {
       "type": "image-slider",
       "blocks": {
-        "text_UERCpC": {
+        "text_AC4CQm": {
           "type": "text",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Home-slide-Boubon.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/mobile_2.jpg"
+            "image": "shopify:\/\/shop_images\/Home-slide-DistNight_9377bf32-b970-4144-9e48-14bbf365af02.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MB-Home-slide-DistNight.jpg"
           }
         },
-        "text_MxVHjz": {
+        "text_fyHthk": {
           "type": "text",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Home-slide-BeeKeeper.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/mobile_1.jpg"
+            "image": "shopify:\/\/shop_images\/Home-slide-BeeKeeper_e4f93dee-5cd5-4406-aa68-4792b65ee33c.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MB-Home-slide-BeeKeeper.jpg"
           }
         },
-        "text_nGxDL4": {
+        "text_nLdRra": {
           "type": "text",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Home-slide-DistNight.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/mobile_4.jpg"
+            "image": "shopify:\/\/shop_images\/Home-slide-OldFashioed_624a8a82-83d3-4c01-a299-e528811f0f0a.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MB-Home-slide-OldFashioed.jpg"
           }
         },
-        "text_LJn3HT": {
+        "text_4nEEBK": {
           "type": "text",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Home-slide-OldFashioed.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/mobile_5.jpg"
+            "image": "shopify:\/\/shop_images\/Home-slide-Desert_2ee415ce-3678-4ac2-a750-4ea09658718a.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MB-Home-slide-Desert.jpg"
           }
         },
-        "text_PPWWMw": {
+        "text_k3TnXE": {
           "type": "text",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Home-slide-Desert.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/mobile_3.jpg"
+            "image": "shopify:\/\/shop_images\/Home-ColdBrewMartini.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MB-Home-ColdBrewMartini.jpg"
+          }
+        },
+        "text_QEUY4Q": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Home-slide-BarleyHarvest.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MB-Home-slide-BarleyHarvest.jpg"
+          }
+        },
+        "text_qpUYmF": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Home-slide-Pachanga.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MB-Home-slide-Pachanga.jpg"
+          }
+        },
+        "text_gxCagR": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Home-slide-StillDrawing.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MB-Home-slide-StillDrawing.jpg"
           }
         }
       },
       "block_order": [
-        "text_UERCpC",
-        "text_MxVHjz",
-        "text_nGxDL4",
-        "text_LJn3HT",
-        "text_PPWWMw"
+        "text_AC4CQm",
+        "text_fyHthk",
+        "text_nLdRra",
+        "text_4nEEBK",
+        "text_k3TnXE",
+        "text_QEUY4Q",
+        "text_qpUYmF",
+        "text_gxCagR"
       ],
       "name": "Image Slider",
       "settings": {}
@@ -140,7 +165,7 @@
       "name": "Product Grid",
       "settings": {
         "heading": "OUR WHISKEY",
-        "background_image": "shopify:\/\/shop_images\/background-temp.jpg"
+        "background_image": "shopify:\/\/shop_images\/Home-Product-Blk-Bkgrd-DT-2.jpg"
       }
     },
     "alternating_image_text_g4JDaJ": {

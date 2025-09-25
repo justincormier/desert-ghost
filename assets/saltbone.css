@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Ruwudu';
+  src: url({{ "Ruwudu-SemiBold.ttf" | asset_url }}) format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
 :root {
   --color-darkblue: #191B27;
   --color-gold: #D9B36F;
@@ -75,9 +82,8 @@ p {
 a.btn {
   background-color: var(--color-darkblue);
   color: white;
-  padding: 5px 45px 7px;
-  border: solid 2px transparent;
-  border-radius: 9px;
+  padding: 8px 45px 10px;
+  border: solid 1px transparent;
   font-size: 22px;
   line-height: 22px;
   font-weight: 800;
@@ -87,12 +93,12 @@ a.btn {
 
   &:hover {
     color: var(--color-gold);
-    border: solid 2px var(--color-gold);
+    border: solid 1px var(--color-gold);
   }
 
-  &.square {
-    border-radius: 0;
+  &.outline {
     border-color: var(--color-gold);
+    background-color: transparent;
   }
 
   @media (max-width: 768px) {
@@ -128,7 +134,7 @@ header {
 
 header-menu {
 
-  overflow-list {
+  overflow-list-disabled {
     --menu-horizontal-gap: 25px;
   }
 

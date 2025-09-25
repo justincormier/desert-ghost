@@ -1,16 +1,11 @@
 <section class="home-video-hero">
-  <video src="{{ section.settings.video.sources[1].url }}" muted loop autoplay playsinline></video>
-  <div class="content-wrapper">
-    <div data-aos="fade-up" data-aos-duration="1500" class="content">
-      <h1>{{ section.settings.heading }}</h1>
-      <a href="{{ section.settings.button_url }}" class="btn">{{ section.settings.button_label }}</a>
-    </div>
-    <div class="product-image">
-      <img src="{{ section.settings.product_image | img_url: '1000x' }}" alt="{{ section.settings.product_url.alt }}">
-    </div>
-    
-  </div>
-
+  <video muted loop playsinline autoplay>
+    <source src="{{ section.settings.video.sources[1].url }}" media="(min-width:768px)">
+    <source src="{{ section.settings.video_mobile.sources[1].url }}" media="(max-width:768px)">
+  </video>  
+  {% if section.settings.button_url != blank %}
+    <a href="{{ section.settings.button_url }}" class="btn">{{ section.settings.button_label }}</a>
+  {% endif %}
 </section>
 
 {% schema %}
@@ -23,14 +18,9 @@
         "label": "Video"
       },
       {
-        "id": "product_image",
-        "type": "image_picker",
-        "label": "Product Image"
-      },
-      {
-        "id": "heading",
-        "type": "text",
-        "label": "Heading"
+        "id": "video_mobile",
+        "type": "video",
+        "label": "Video Mobile"
       },
       {
         "id": "button_url",
@@ -59,18 +49,6 @@
     height: 800px;
     overflow: hidden;
 
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.6);
-      z-index: 1;
-    }
-
     video {
       position: absolute;
       top: 0;
@@ -82,40 +60,11 @@
       z-index: 0;
     }
 
-    .content-wrapper {
-      max-width: 1600px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      height: 100%;
-      position: relative;
-      padding: 0 35px;
-
-      .product-image {
-        animation: heroBottle 2s forwards;      
-        position: absolute;
-        top: -150px;
-        right: 100px;
-        position: absolute;
-        z-index: 1;
-
-        img {         
-          width: 400px;                  
-        }
-      }
-
-      .content {
-        background-color: rgba(255,255,255,0.55);
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        max-width: 800px;
-        padding: 65px;
-        z-index: 2;
-        h1 {
-          color: var(--color-darkblue);
-        }
-      }
+    a.btn {
+      position: absolute;
+      bottom: 45px;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     @media (max-width: 1200px) {
@@ -137,7 +86,7 @@
     }
 
     @media (max-width: 768px) {
-      height: 550px;
+      height: 450px;
       .content-wrapper {
         .content {
           padding: 45px 25px;

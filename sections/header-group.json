@@ -81,7 +81,7 @@
       },
       "settings": {
         "logo_position": "left",
-        "menu_position": "center",
+        "menu_position": "right",
         "menu_row": "top",
         "show_search": false,
         "search_position": "right",

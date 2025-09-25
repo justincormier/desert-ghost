@@ -1,5 +1,5 @@
-<div data-aos="fade-up" data-aos-duration="1500" class="newsletter">
-  <div class="content-wrapper">
+<div class="newsletter">
+  <div data-aos="fade-up" data-aos-duration="1500" class="content-wrapper">
     <h5>{{ section.settings.newsletter_heading }}</h5>
     <div class="text">
       {{ section.settings.newsletter_text }}
@@ -41,6 +41,13 @@
       <p class="notice">*hours are subject to change</p>
     </div>
   </div>  
+  <style>
+    @media (max-width: 768px) {
+      footer.saltbone-footer {
+        background-image: url('{{ section.settings.background_image_mobile | img_url: '900x' }}') !important;
+      }
+    }
+  </style>
 </footer>
 <div class="copyright">
   <p>&copy; {{ 'now' | date: '%Y' }} Desert Ghost Distilling LLC. All Rights Reserved.</p>
@@ -55,6 +62,11 @@
         "id": "background_image",
         "type": "image_picker",
         "label": "Background Image"
+      },
+      {
+        "id": "background_image_mobile",
+        "type": "image_picker",
+        "label": "Background Image Mobile"
       },
       {
         "id": "footer_logo",
@@ -150,7 +162,7 @@
 
   footer.saltbone-footer {
     background-size: cover;
-    background-position: center;
+    background-position: right;
     padding: 65px 35px;
 
     .content-wrapper {
@@ -259,4 +271,6 @@
       }
     }
   }
+
+
 {% endstylesheet %}
