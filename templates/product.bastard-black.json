@@ -1,0 +1,273 @@
+{
+  "sections": {
+    "product_main_TMRW9y": {
+      "type": "product-main",
+      "name": "Product Main",
+      "settings": {}
+    },
+    "main": {
+      "type": "product-information",
+      "blocks": {
+        "media-gallery": {
+          "type": "_product-media-gallery",
+          "static": true,
+          "settings": {
+            "media_presentation": "grid",
+            "media_columns": "one",
+            "image_gap": 15,
+            "large_first_image": false,
+            "icons_style": "none",
+            "slideshow_controls_style": "counter",
+            "slideshow_mobile_controls_style": "dots",
+            "thumbnail_position": "right",
+            "thumbnail_width": 44,
+            "aspect_ratio": "adapt",
+            "constrain_to_viewport": true,
+            "media_fit": "contain",
+            "media_radius": 0,
+            "extend_media": false,
+            "zoom": true,
+            "video_loop": false,
+            "hide_variants": true,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "product-details": {
+          "type": "_product-details",
+          "static": true,
+          "settings": {
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "details_position": "flex-start",
+            "gap": 28,
+            "sticky_details_desktop": true,
+            "inherit_color_scheme": true,
+            "color_scheme": "scheme-1",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 24,
+            "padding-block-end": 24,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "group_icgrde": {
+              "type": "group",
+              "name": "Header",
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "product_title_eYVzTU": {
+                  "type": "product-title",
+                  "name": "t:names.title",
+                  "settings": {
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h3",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "price_tVjtKg": {
+                  "type": "price",
+                  "settings": {
+                    "show_sale_price_first": true,
+                    "show_installments": false,
+                    "show_tax_info": false,
+                    "type_preset": "paragraph",
+                    "width": "100%",
+                    "alignment": "left",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "color": "var(--color-foreground)",
+                    "padding-block-start": 4,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "product_title_eYVzTU",
+                "price_tVjtKg"
+              ]
+            },
+            "custom_liquid_4cEQNy": {
+              "type": "custom-liquid",
+              "name": "t:names.custom_liquid",
+              "settings": {
+                "custom_liquid": "<script type=\"text\/javascript\">\n    (function (currentScript) {\n        window.BottleNexus ? BottleNexusInit() : loadScript();\n        function loadScript() {\n            var script = document.createElement('script');\n            script.async = true;\n            script.src = 'https:\/\/buybutton.bottlenexus.com\/buybutton.min.js?v=' + Date.now();\n            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);\n            script.onload = BottleNexusInit;\n        }\n        function BottleNexusInit() {\n            BottleNexus.init().createComponent({\n                currentScript: currentScript,\n                token: 'acbae3ba-62b4-11f0-93ed-0242ac110002',\n                id: 8456,\n                options: {\n\t\t\t\t    \"iframe\": true,\n\t\t\t\t    \"layout\": \"basic\",\n\t\t\t\t    \"behavior\": \"sidebar\",\n\t\t\t\t    \"buttonRadius\": 5,\n\t\t\t\t    \"buttonFontSize\": 16,\n\t\t\t\t    \"buttonWidth\": 180,\n\t\t\t\t    \"buttonAlignment\": \"center\",\n\t\t\t\t    \"buttonText\": \"PRE ORDER\",\n\t\t\t\t    \"buttonTextColor\": \"#ffffffff\",\n\t\t\t\t    \"buttonBackground\": \"#A38B68\",\n\t\t\t\t    \"initialQuantity\": 1,\n\t\t\t\t    \"cartButtonRadius\": 5,\n\t\t\t\t    \"cartCheckoutBackgroundColor\": \"#A38B68\",\n\t\t\t\t    \"cartCheckoutBackgroundDisabledColor\": \"#B2B2B2FF\",\n\t\t\t\t    \"cartCheckoutTextColor\": \"#FFFFFFFF\",\n\t\t\t\t    \"cartHeadingText\": \"Cart\",\n\t\t\t\t    \"cartCheckoutText\": \"CHECKOUT\",\n\t\t\t\t    \"cartEmptyText\": \"No products added\",\n\t\t\t\t    \"cartAdditionalInformationText\": \"\",\n\t\t\t\t    \"cartBackgroundColor\": \"#FEFEFEFF\",\n\t\t\t\t    \"cartTextColor\": \"#000000FF\",\n\t\t\t\t    \"showInput\": false,\n\t\t\t\t    \"utm\": {\n\t\t\t\t        \"source\": \"BuyButton\"\n\t\t\t\t    },\n\t\t\t\t    \"donation\": \"no_donation\",\n\t\t\t\t    \"styles\": {}\n\t\t\t\t}\n            });\n        }\n    })(document.currentScript);\n<\/script>"
+              },
+              "blocks": {}
+            },
+            "text_aEtTtq": {
+              "type": "text",
+              "name": "Product description",
+              "settings": {
+                "text": "{{ closest.product.description }}",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-primary--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "group_icgrde",
+            "custom_liquid_4cEQNy",
+            "text_aEtTtq"
+          ]
+        }
+      },
+      "disabled": true,
+      "settings": {
+        "content_width": "content-center-aligned",
+        "desktop_media_position": "left",
+        "equal_columns": false,
+        "limit_details_width": false,
+        "gap": 48,
+        "color_scheme": "",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "product_grid_3MKP3a": {
+      "type": "product-grid",
+      "blocks": {
+        "product_HqpKK3": {
+          "type": "product",
+          "settings": {
+            "title": "THE BASTARD BOURBON",
+            "stat_1": "AGED 4 YEARS",
+            "stat_2": "92 PROOF",
+            "stat_3": "750 ML",
+            "description": "Our original mash bill from 1880s, Bastard is our Flagship brand. Smooth & complex flavor with gentle spiciness and a sweet oak aroma.",
+            "button_label": "SHOP NOW",
+            "button_url": "shopify:\/\/products\/the-bastard-bourbon",
+            "image": "shopify:\/\/shop_images\/Card-Bastard_b41a9ac9-cf2d-47c0-a71b-f3b532b1706d.png"
+          }
+        },
+        "product_JmcBny": {
+          "type": "product",
+          "settings": {
+            "title": "DESERT GHOST HONEY BOURBON",
+            "stat_1": "AGED 3 YEARS",
+            "stat_2": "90 PROOF",
+            "stat_3": "750 ML",
+            "description": "We start with our Texas Straight Small Batch Bourbon Whiskey, and then we infuse it with Big Bend Honey Company’s wild desert honey. The result is a velvety smooth bourbon with a subtle honey finish.",
+            "button_label": "SHOP NOW",
+            "button_url": "#",
+            "image": "shopify:\/\/shop_images\/Card-Honey_Bourbon.png"
+          }
+        },
+        "product_NWTChB": {
+          "type": "product",
+          "settings": {
+            "title": "DESERT GHOST TEXAS BOURBON WHISKEY",
+            "stat_1": "AGED 3 YEARS",
+            "stat_2": "92 PROOF",
+            "stat_3": "750 ML",
+            "description": "Small batch bourbon whiskey, triple filtered through local mesquite and oak charcoal, then desert aged in charred new white oak barrels for three years.",
+            "button_label": "SHOP NOW",
+            "button_url": "#",
+            "image": "shopify:\/\/shop_images\/Texas_Whiskey.png"
+          }
+        }
+      },
+      "block_order": [
+        "product_HqpKK3",
+        "product_JmcBny",
+        "product_NWTChB"
+      ],
+      "name": "Product Grid",
+      "settings": {
+        "heading": "YOU MIGHT LIKE",
+        "background_image": "shopify:\/\/shop_images\/Home-Product-Blk-Bkgrd-DT-2.jpg"
+      }
+    }
+  },
+  "order": [
+    "product_main_TMRW9y",
+    "main",
+    "product_grid_3MKP3a"
+  ]
+}

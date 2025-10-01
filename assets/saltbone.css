@@ -106,6 +106,10 @@ a.btn {
   }
 }
 
+header-actions {
+  display: none !important;
+}
+
 header {
   .header__row {
     background-color: var(--color-darkblue);
@@ -150,6 +154,31 @@ header-menu {
     }
   }
 }
+
+.header__drawer--mobile {
+  summary.header__icon {
+    color: white;
+  }
+
+  .menu-drawer {
+    background: #191B27;
+    button.close-button {
+      span {
+        color: white;
+      }
+    }
+
+    span.menu-drawer__menu-item-text {
+      color: white;
+    }
+
+    ul.menu-drawer__menu--childlist {
+      margin-left: 10px;
+    }
+  }
+}
+
+
 
 .mega-menu__grid.saltbone-mega-menu {
   max-width: 1000px;
